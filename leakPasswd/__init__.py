@@ -2,33 +2,26 @@
 # encoding: UTF-8
 
 __author__ = 'lauix'
-__version__ = "1.1"
+__version__ = "1.2"
 
 import requests
+import json
+from http import SGK
 
 '''
-blog : http://www.fucksec.com/
+blog : https://www.fucksec.com/
 '''
-
-URL = 'http://passwd.fucksec.com/api/'
-
 
 def findBreach(name):
-    data = {
-        'name': name
-    }
-    r = requests.post(URL + 'findBreach', data=data)
-    return r.json()
+    result = SGK().findBreach(str(name))
+    return json.dumps(result)
 
 
 def queryBreachs():
-    r = requests.post(URL + 'queryBreachs')
-    return r.json()
+    result = SGK().queryBreachs()
+    return json.dumps(result)
 
 
 def findAccount(account):
-    data = {
-        'account': account
-    }
-    r = requests.post(URL + 'findAccount', data=data)
-    return r.json()
+    result = SGK().findAccount(str(account))
+    return json.dumps(result)

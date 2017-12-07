@@ -1,6 +1,6 @@
 # leakPasswd
 
-这是一款用来查询密码泄露的 **`Python`** 模块
+这是一款用来查询密码泄露的 **`Python`** 模块，基于 Haveibeenpwned Api
 
 **开源地址**：https://github.com/lauixData/leakPasswd
 
@@ -58,4 +58,6 @@ leakPasswd.findAccount('test@qq.com')
 > Author ：天才小三斤
 >
 > E-mail ：lauixData@gmail.com
+>
+> Blog : https://www.fucksec.com/
 
